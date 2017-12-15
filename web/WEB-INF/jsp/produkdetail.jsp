@@ -12,6 +12,9 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>${produk.namaProduk}</h1>
+        Nama        : ${produk.namaProduk}<p/>
+        Deskripsi   : ${produk.deskripsiProduk}<p/>
+        Harga       : ${produk.hargaProduk}<p/>
     </body>
 </html>

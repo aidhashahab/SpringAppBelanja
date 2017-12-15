@@ -39,8 +39,9 @@ public class ProdukService {
 
     @Transactional
     public List<Produk> findAll() {
+        em = emf.createEntityManager();
         List<Produk> produks;
-        produks = this.getEm().createNamedQuery("Produk.findAll").getResultList();
+        produks = this.em.createNamedQuery("Product.findAll").getResultList();
         return produks;
     }
 

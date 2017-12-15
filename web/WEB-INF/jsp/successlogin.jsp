@@ -17,7 +17,7 @@
         <jsp:include page="head.jsp"/> 
         <div class="container">
             <h1>${user.username}, Anda berhasil Login</h1>
-            <a href="${pageContext.request.contextPath}/produklist">See Our Products</a>
+            <a href="${pageContext.request.contextPath}/produks">See Our Products</a>
 
         </div>
     </body>

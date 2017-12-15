@@ -15,14 +15,18 @@ public class ProdukController {
     @Autowired
     ProdukService ps;
     
-    @RequestMapping("/all")
+    @RequestMapping()
     public String showAllProduk(Model model){
         List<Produk> produks = ps.findAll();
+        for (Produk produk : produks) {
+            System.out.println("Nama :"+produk.getNamaProduk());
+        }
         model.addAttribute("produks", produks);
         return "produklist";
     }
-    @RequestMapping(value="/{produkId")
+    @RequestMapping(value="/{produkId}")
     public String showOneProduk(@PathVariable Integer produkId, Model model){
+        System.out.println("IDnya bor "+ produkId);
         Produk produk = ps.findById(Long.valueOf(produkId));
         model.addAttribute("produk", produk);
         return "produkdetail";

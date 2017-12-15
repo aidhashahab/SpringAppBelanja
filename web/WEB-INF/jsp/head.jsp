@@ -7,7 +7,5 @@
         <c:if test="${not empty sessionScope.user}">
             <div><a href="${pageContext.request.contextPath}/logout">Logout</a></div>
         </c:if>
-
     </div>
-
 </div>
