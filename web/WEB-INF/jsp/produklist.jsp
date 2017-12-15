@@ -28,7 +28,7 @@
         <table style="width:100%">
             <c:forEach var="p" items="${produks}">
                 <tr>
-                    <td><a href="${p.produkId}">${p.namaProduk}</a></td>
+                    <td><a href="${pageContext.request.contextPath}/produks/${p.id}">${p.namaProduk}</a></td>
                 </tr>
             </c:forEach>
         </table>
