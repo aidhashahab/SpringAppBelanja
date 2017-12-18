@@ -4,6 +4,8 @@
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <class>com.valensi.model.User</class>
     <class>com.valensi.model.Produk</class>
+    <class>com.valensi.CartController</class>
+    <class>com.valensi.model.Cart</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/springdb"/>

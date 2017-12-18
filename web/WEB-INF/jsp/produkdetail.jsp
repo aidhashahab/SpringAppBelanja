@@ -4,6 +4,7 @@
     Author     : user
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,9 +13,39 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>${produk.namaProduk}</h1>
-        Nama        : ${produk.namaProduk}<p/>
-        Deskripsi   : ${produk.deskripsiProduk}<p/>
-        Harga       : ${produk.hargaProduk}<p/>
+        <jsp:include page="head.jsp"/>   
+
+
+        <!-- Product-Details-page -->
+        <div class="details-page">
+            <div class="content details-page">
+                <!---start-product-details--->
+                <div class="product-details">
+                    <div class="container">
+                        <!--ul class="product-head">
+                            <li><a href="<c:url value="welcome"/>"Home</a> <span>::</span></li>
+                            <li class="active-page">Product Page</li>
+                            <div class="clearfix"> </div>
+                        </ul-->
+
+                        <div class="col-lg-offset-1">
+                            <p/><p/><p/>
+                            <h1>${produk.namaProduk}</h1><p/>
+                            Deskripsi :<p/>
+                            ${produk.deskripsiProduk}<p/><p/><br/>
+                            Harga :<p/>
+                            ${produk.hargaProduk}<p/><p/><br/>
+                            Stok Barang :<p/>
+                            ${produk.quantity}
+                        </div>
+                        <div class="product-pic-info-cart">
+                            <a class="p-btn" href="#">Buy Now</a>
+                        </div>                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
     </body>
 </html>
